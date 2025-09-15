@@ -1,64 +1,64 @@
-// Пример использования системы плагинов Scripter
+// Example of using Scripter plugin system
 
-// Загружаем плагин C# синтаксиса
-print("Загрузка плагина C# синтаксиса...");
+// Load C# syntax plugin
+print("Loading C# syntax plugin...");
 var pluginLoaded = loadPlugin("csharp");
 
 if (pluginLoaded) {
-    print("Плагин успешно загружен!");
+    print("Plugin loaded successfully!");
     
-    // Список загруженных плагинов
+    // List loaded plugins
     listPlugins();
     
-    // Создаем функцию с C# синтаксисом
-    print("\nСоздание функции с C# синтаксисом...");
+    // Create function with C# syntax
+    print("\nCreating function with C# syntax...");
     
-    // Пример 1: Простая функция
+    // Example 1: Simple function
     var result1 = CreateFunction("MyFunction", "Func<int, string, string> (argumentInt: int, argumentString: string) => { return \"ok it works\"; }");
     
     if (result1) {
-        print("Функция MyFunction создана успешно!");
+        print("Function MyFunction created successfully!");
     }
     
-    // Пример 2: Функция с математическими операциями
+    // Example 2: Function with mathematical operations
     var result2 = CreateFunction("AddNumbers", "Func<double, double, double> (a: double, b: double) => { return a + b; }");
     
     if (result2) {
-        print("Функция AddNumbers создана успешно!");
+        print("Function AddNumbers created successfully!");
     }
     
-    // Пример 3: Функция для работы со строками
+    // Example 3: Function for string operations
     var result3 = CreateFunction("GreetUser", "Func<string, string> (name: string) => { return \"Hello, \" + name + \"!\"; }");
     
     if (result3) {
-        print("Функция GreetUser создана успешно!");
+        print("Function GreetUser created successfully!");
     }
     
-    // Тестируем функции
-    print("\nТестирование созданных функций:");
+    // Test functions
+    print("\nTesting created functions:");
     
-    // Вызываем созданные функции (если они были зарегистрированы)
-    print("Тест завершен!");
+    // Call created functions (if they were registered)
+    print("Test completed!");
     
 } else {
-    print("Ошибка загрузки плагина!");
+    print("Plugin loading error!");
 }
 
-// Демонстрация работы с типами
-print("\nДемонстрация работы с типами:");
+// Type system demonstration
+print("\nType system demonstration:");
 var number = 42;
 var text = "Hello World";
 var flag = true;
 
-print("Тип числа: " + TypeOf(number));
-print("Тип строки: " + TypeOf(text));
-print("Тип булева значения: " + TypeOf(flag));
+print("Number type: " + TypeOf(number));
+print("String type: " + TypeOf(text));
+print("Boolean type: " + TypeOf(flag));
 
-// Приведение типов
-print("\nДемонстрация приведения типов:");
+// Type casting
+print("\nType casting demonstration:");
 var stringNumber = "123";
 var convertedNumber = Cast(stringNumber, "int");
-print("Исходное значение: " + stringNumber + " (тип: " + TypeOf(stringNumber) + ")");
-print("После приведения к int: " + convertedNumber + " (тип: " + TypeOf(convertedNumber) + ")");
+print("Original value: " + stringNumber + " (type: " + TypeOf(stringNumber) + ")");
+print("After casting to int: " + convertedNumber + " (type: " + TypeOf(convertedNumber) + ")");
 
-print("\nПример завершен!");
+print("\nExample completed!");

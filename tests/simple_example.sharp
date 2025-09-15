@@ -1,26 +1,26 @@
-// Простой пример для тестирования
+// Simple example for testing
 var x = 10;
 var y = 5;
 var sum = x + y;
-print("Сумма: " + sum);
+print("Sum: " + sum);
 
 function add(a, b) {
     return a + b;
 }
 
-print("Результат функции: " + add(3, 4));
+print("Function result: " + add(3, 4));
 
 var age = 18;
 if (age >= 18) {
-    print("Совершеннолетний");
+    print("Adult");
 } else {
-    print("Несовершеннолетний");
+    print("Minor");
 }
 
 var i = 1;
 while (i <= 5) {
-    print("Итерация: " + i);
+    print("Iteration: " + i);
     i = i + 1;
 }
 
-print("Скрипт выполнен успешно!");
+print("Script executed successfully!");

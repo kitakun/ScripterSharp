@@ -1,11 +1,11 @@
-// Простой тест базовой функциональности
+// Simple test of basic functionality
 var x = 10;
 var y = 5;
 var sum = x + y;
-print("Сумма: " + sum);
+print("Sum: " + sum);
 
 function add(a, b) {
     return a + b;
 }
 
-print("Результат функции: " + add(3, 4));
+print("Function result: " + add(3, 4));

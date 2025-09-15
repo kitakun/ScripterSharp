@@ -1,22 +1,22 @@
-// Демонстрация работы с функциями, зарегистрированными из C# кода
-// Этот файл показывает, как будут работать функции после их регистрации в C#
+// Demonstration of working with functions registered from C# code
+// This file shows how functions will work after their registration in C#
 
-print("=== Демонстрация зарегистрированных функций ===");
+print("=== Registered Functions Demonstration ===");
 
-// Примечание: Эти функции должны быть зарегистрированы в C# коде перед выполнением
-// Пример регистрации в C#:
+// Note: These functions must be registered in C# code before execution
+// Example registration in C#:
 // var registry = interpreter.GetFunctionRegistry();
 // registry.RegisterFunction<int>("DoSomething", addTo => new RuntimeValue(addTo + 1));
 // registry.RegisterFunction<string>("Greet", name => new RuntimeValue($"Hello, {name}!"));
 // registry.RegisterFunction<int, int>("Add", (a, b) => new RuntimeValue(a + b));
 
-print("\nЕсли функции зарегистрированы в C# коде, то:");
-print("DoSomething(5) вернет: 6");
-print("Greet(\"World\") вернет: Hello, World!");
-print("Add(3, 4) вернет: 7");
+print("\nIf functions are registered in C# code, then:");
+print("DoSomething(5) will return: 6");
+print("Greet(\"World\") will return: Hello, World!");
+print("Add(3, 4) will return: 7");
 
-print("\n=== Демонстрация завершена ===");
-print("Для тестирования реальных функций нужно:");
-print("1. Создать C# код с регистрацией функций");
-print("2. Выполнить регистрацию перед запуском скрипта");
-print("3. Затем выполнить этот Sharp скрипт");
+print("\n=== Demonstration completed ===");
+print("To test real functions you need to:");
+print("1. Create C# code with function registration");
+print("2. Execute registration before running the script");
+print("3. Then execute this Sharp script");

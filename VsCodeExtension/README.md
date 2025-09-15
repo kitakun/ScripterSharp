@@ -1,113 +1,113 @@
 # Sharp Language Support for VS Code
 
-Это расширение предоставляет поддержку языка Sharp для Visual Studio Code, включая подсветку синтаксиса, автодополнение и сниппеты.
+This extension provides Sharp language support for Visual Studio Code, including syntax highlighting, autocompletion, and snippets.
 
-## Возможности
+## Features
 
-- 🎨 **Улучшенная подсветка синтаксиса** - Полная поддержка синтаксиса языка Sharp с категоризацией ключевых слов
-- 🌈 **Цветовая схема** - Встроенная темная тема "Sharp Dark" с оптимизированными цветами
-- 📝 **Сниппеты** - Готовые шаблоны для быстрого написания кода
-- 🔧 **Автозакрытие скобок** - Автоматическое закрытие скобок, кавычек и других символов
-- 📏 **Правила отступов** - Автоматическое форматирование отступов
-- 💬 **Комментарии** - Поддержка однострочных и многострочных комментариев
+- 🎨 **Enhanced Syntax Highlighting** - Full Sharp language syntax support with keyword categorization
+- 🌈 **Color Scheme** - Built-in "Sharp Dark" theme with optimized colors
+- 📝 **Snippets** - Ready-to-use templates for quick code writing
+- 🔧 **Auto-closing Brackets** - Automatic closing of brackets, quotes, and other symbols
+- 📏 **Indentation Rules** - Automatic indentation formatting
+- 💬 **Comments** - Support for single-line and multi-line comments
 
-## Поддерживаемые конструкции
+## Supported Constructs
 
-### Ключевые слова (с цветовой категоризацией)
+### Keywords (with color categorization)
 
-#### 🔵 Ключевые слова объявления (синий, жирный)
-- `var` - объявление переменных
-- `function` - объявление функций  
-- `class` - объявление классов
-- `static` - статические классы
+#### 🔵 Declaration Keywords (blue, bold)
+- `var` - variable declaration
+- `function` - function declaration  
+- `class` - class declaration
+- `static` - static classes
 
-#### 🟡 Модификаторы доступа (желтый, курсив)
-- `public` - публичный доступ
-- `private` - приватный доступ
+#### 🟡 Access Modifiers (yellow, italic)
+- `public` - public access
+- `private` - private access
 
-#### 🟣 Ключевые слова управления потоком (фиолетовый, жирный)
-- `if`, `else` - условные операторы
-- `while`, `for` - циклы
-- `return` - возврат значения
+#### 🟣 Flow Control Keywords (purple, bold)
+- `if`, `else` - conditional statements
+- `while`, `for` - loops
+- `return` - return value
 
-#### 🔵 Литералы (синий)
-- `true`, `false` - булевы значения
-- `null` - null значение
+#### 🔵 Literals (blue)
+- `true`, `false` - boolean values
+- `null` - null value
 
-#### 🟢 Специальные ключевые слова (зеленый)
-- `new` - создание объекта
-- `this` - ссылка на текущий объект
-- `base` - ссылка на базовый класс
+#### 🟢 Special Keywords (green)
+- `new` - object creation
+- `this` - reference to current object
+- `base` - reference to base class
 
-### Операторы
-- Арифметические: `+`, `-`, `*`, `/`, `%`
-- Сравнения: `==`, `!=`, `<`, `>`, `<=`, `>=`
-- Логические: `&&`, `||`, `!`
-- Присваивания: `=`, `+=`, `-=`
+### Operators
+- Arithmetic: `+`, `-`, `*`, `/`, `%`
+- Comparison: `==`, `!=`, `<`, `>`, `<=`, `>=`
+- Logical: `&&`, `||`, `!`
+- Assignment: `=`, `+=`, `-=`
 
-### Типы данных
-- Числа: `123`, `45.67`
-- Строки: `"hello"`, `'world'`
-- Булевы значения: `true`, `false`
+### Data Types
+- Numbers: `123`, `45.67`
+- Strings: `"hello"`, `'world'`
+- Boolean values: `true`, `false`
 - Null: `null`
 
-## Сниппеты
+## Snippets
 
-Доступные сниппеты (введите префикс и нажмите Tab):
+Available snippets (type prefix and press Tab):
 
-- `func` - объявление функции
-- `class` - объявление класса
-- `static` - статический класс
-- `var` - объявление переменной
-- `if` - условный оператор
-- `ifelse` - условный оператор с else
-- `while` - цикл while
-- `for` - цикл for
-- `print` - вывод в консоль
-- `input` - ввод с консоли
-- `return` - возврат значения
-- `//` - однострочный комментарий
-- `/*` - многострочный комментарий
+- `func` - function declaration
+- `class` - class declaration
+- `static` - static class
+- `var` - variable declaration
+- `if` - conditional statement
+- `ifelse` - conditional statement with else
+- `while` - while loop
+- `for` - for loop
+- `print` - console output
+- `input` - console input
+- `return` - return value
+- `//` - single-line comment
+- `/*` - multi-line comment
 
-## Установка
+## Installation
 
-1. Скопируйте папку расширения в директорию расширений VS Code
-2. Перезапустите VS Code
-3. Расширение автоматически активируется для файлов с расширением `.sharp`
+1. Copy the extension folder to VS Code extensions directory
+2. Restart VS Code
+3. Extension automatically activates for files with `.sharp` extension
 
-## Использование
+## Usage
 
-После установки расширения:
+After installing the extension:
 
-1. Откройте файл с расширением `.sharp`
-2. Наслаждайтесь улучшенной подсветкой синтаксиса
-3. Используйте сниппеты для быстрого написания кода
-4. Автодополнение и форматирование работают автоматически
+1. Open a file with `.sharp` extension
+2. Enjoy enhanced syntax highlighting
+3. Use snippets for quick code writing
+4. Autocompletion and formatting work automatically
 
-### Цветовая схема "Sharp Dark"
+### "Sharp Dark" Color Scheme
 
-Расширение включает встроенную темную тему "Sharp Dark", оптимизированную для языка Sharp:
+The extension includes a built-in "Sharp Dark" theme optimized for Sharp language:
 
-- **Ключевые слова объявления** - синий, жирный шрифт
-- **Модификаторы доступа** - желтый, курсив
-- **Ключевые слова управления потоком** - фиолетовый, жирный
-- **Литералы** - синий
-- **Специальные ключевые слова** - зеленый
-- **Строки** - оранжевый
-- **Числа** - светло-зеленый
-- **Функции** - желтый
-- **Классы** - зеленый, жирный
-- **Переменные** - светло-синий
-- **Комментарии** - зеленый, курсив
+- **Declaration Keywords** - blue, bold font
+- **Access Modifiers** - yellow, italic
+- **Flow Control Keywords** - purple, bold
+- **Literals** - blue
+- **Special Keywords** - green
+- **Strings** - orange
+- **Numbers** - light green
+- **Functions** - yellow
+- **Classes** - green, bold
+- **Variables** - light blue
+- **Comments** - green, italic
 
-Для активации темы:
-1. Нажмите `Ctrl+Shift+P` (или `Cmd+Shift+P` на Mac)
-2. Введите "Preferences: Color Theme"
-3. Выберите "Sharp Dark"
+To activate the theme:
+1. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
+2. Type "Preferences: Color Theme"
+3. Select "Sharp Dark"
 
-## Примеры
+## Examples
 
-### Простая функция
+### Simple Function
 ```sharp
 function greet(name) {
     print("Hello, " + name + "!");
@@ -116,7 +116,7 @@ function greet(name) {
 greet("World");
 ```
 
-### Класс с методами
+### Class with Methods
 ```sharp
 class Person {
     var name;
@@ -136,7 +136,7 @@ var person = new Person("Alice", 25);
 person.sayHello();
 ```
 
-### Условные операторы и циклы
+### Conditional Statements and Loops
 ```sharp
 var numbers = [1, 2, 3, 4, 5];
 var sum = 0;
@@ -150,18 +150,18 @@ for (var i = 0; i < 5; i = i + 1) {
 print("Sum: " + sum);
 ```
 
-## Разработка
+## Development
 
-Для разработки расширения:
+For extension development:
 
-1. Установите Node.js и npm
-2. Установите зависимости: `npm install`
-3. Запустите в режиме разработки: `F5` в VS Code
+1. Install Node.js and npm
+2. Install dependencies: `npm install`
+3. Run in development mode: `F5` in VS Code
 
-## Лицензия
+## License
 
 MIT License
 
-## Поддержка
+## Support
 
-Если у вас есть вопросы или предложения, создайте issue в репозитории проекта.
+If you have questions or suggestions, create an issue in the project repository.

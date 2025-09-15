@@ -7,40 +7,40 @@ using Scripter.Infrastructure.Console;
 namespace Scripter.Examples
 {
     /// <summary>
-    /// Демонстрация регистрации функций из C# кода
+    /// Demonstration of function registration from C# code
     /// </summary>
     public class RegistrationDemo
     {
         public static void RunDemo()
         {
-            Console.WriteLine("=== Демонстрация регистрации функций из C# ===");
+            Console.WriteLine("=== Function Registration from C# Demonstration ===");
 
-            // Создаем интерпретатор
+            // Create interpreter
             var console = new DefaultConsole();
             var interpreter = new Interpreter(console);
             var registry = interpreter.GetFunctionRegistry();
 
-            // Регистрируем функции с упрощенным синтаксисом
-            Console.WriteLine("\n1. Регистрация функций...");
+            // Register functions with simplified syntax
+            Console.WriteLine("\n1. Registering functions...");
 
-            // Функция с одним параметром
-            registry.RegisterFunction<int>("DoSomething", addTo => new RuntimeValue(addTo + 1), "Добавляет 1 к числу");
+            // Function with one parameter
+            registry.RegisterFunction<int>("DoSomething", addTo => new RuntimeValue(addTo + 1), "Adds 1 to a number");
 
-            // Функция для работы со строками
-            registry.RegisterFunction<string>("Greet", name => new RuntimeValue($"Hello, {name}!"), "Приветствует пользователя");
+            // Function for string operations
+            registry.RegisterFunction<string>("Greet", name => new RuntimeValue($"Hello, {name}!"), "Greets the user");
 
-            // Функция с двумя параметрами
-            registry.RegisterFunction<int, int>("Add", (a, b) => new RuntimeValue(a + b), "Складывает два числа");
+            // Function with two parameters
+            registry.RegisterFunction<int, int>("Add", (a, b) => new RuntimeValue(a + b), "Adds two numbers");
 
-            Console.WriteLine("Все функции зарегистрированы!");
+            Console.WriteLine("All functions registered!");
 
-            // Теперь можно выполнить Sharp скрипт, который будет использовать эти функции
-            Console.WriteLine("\n2. Функции готовы к использованию в Sharp скриптах:");
-            Console.WriteLine("   - DoSomething(5) вернет 6");
-            Console.WriteLine("   - Greet(\"World\") вернет \"Hello, World!\"");
-            Console.WriteLine("   - Add(3, 4) вернет 7");
+            // Now you can execute Sharp script that will use these functions
+            Console.WriteLine("\n2. Functions are ready to use in Sharp scripts:");
+            Console.WriteLine("   - DoSomething(5) will return 6");
+            Console.WriteLine("   - Greet(\"World\") will return \"Hello, World!\"");
+            Console.WriteLine("   - Add(3, 4) will return 7");
 
-            Console.WriteLine("\n=== Демонстрация завершена! ===");
+            Console.WriteLine("\n=== Demonstration completed! ===");
         }
     }
 }

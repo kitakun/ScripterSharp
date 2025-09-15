@@ -46,7 +46,6 @@ For convenient work with `.sharp` files, install the VS Code extension:
 ```
 Scripter/
 ├── Scripter/                    # Main interpreter code
-│   ├── Program.cs               # Entry point
 │   ├── Core/                    # Domain logic
 │   │   ├── Domain/              # Domain models
 │   │   │   ├── Token.cs         # Tokens (readonly struct)
@@ -74,6 +73,11 @@ Scripter/
 │   ├── language-configuration/  # Language configuration
 │   ├── snippets/                # Code snippets
 │   └── README.md                # Extension documentation
+├── UnityPackage/                # Unity package
+│   ├── Runtime/                 # Runtime scripts
+│   ├── Editor/                  # Editor scripts
+│   ├── Samples~/                # Example scripts
+│   └── package.json             # Unity package manifest
 ├── Scripter.csproj              # Project file
 └── README.md                    # Documentation
 ```
@@ -223,21 +227,32 @@ var len = length("String");
 
 ## Examples
 
-The project includes two examples:
-- `example_script.txt` - basic capabilities
-- `advanced_example.txt` - advanced examples with classes
+The project includes test scripts in the `tests/` folder:
+- `basic_test.sharp` - basic operations (variables, arithmetic, conditions)
+- `working_test.sharp` - working test with conditions
+- `minimal_test.sharp` - minimal test
+- `simple_test.sharp` - simple test with functions
+- `function_test.sharp` - function tests
+- `plugin_example.sharp` - plugin usage examples
 
-## Architecture
+## Unity Integration
 
-The project consists of the following main components:
+The project includes a Unity package for easy integration:
 
-1. **Token.cs** - Token definition and token types
-2. **Lexer.cs** - Lexical analyzer (tokenization)
-3. **AST.cs** - Abstract Syntax Tree
-4. **Parser.cs** - Syntax analyzer
-5. **Runtime.cs** - Runtime system
-6. **Interpreter.cs** - Interpreter for script execution
-7. **Program.cs** - Main program class
+### Features
+- **ScriptableObject Integration** - Store Sharp scripts as Unity assets
+- **Syntax Highlighting** - Custom editor with syntax highlighting
+- **Unity Plugin** - Access to GameObject functions
+- **Custom Functions** - Register your own functions via SharpExtensions
+- **Auto Execution** - Scripts can execute automatically when dragged to scene
+
+### Installation
+Add from GitHub: `https://github.com/kitakun/ScripterSharp.git?path=UnityPackage`
+
+### Usage
+1. Create SharpScript asset via `Create > Scripter > Sharp Script`
+2. Write your Sharp code with Unity functions
+3. Drag to scene for automatic execution (if enabled)
 
 ## Limitations
 

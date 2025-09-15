@@ -1,13 +1,13 @@
 var x = 10;
 var y = 5;
 var sum = x + y;
-print("Сумма: " + sum);
+print("Sum: " + sum);
 
 var age = 18;
 if (age >= 18) {
-    print("Совершеннолетний");
+    print("Adult");
 } else {
-    print("Несовершеннолетний");
+    print("Minor");
 }
 
-print("Тест завершен!");
+print("Test completed!");
