@@ -1,186 +1,186 @@
-# Scripter - Интерпретатор скриптов на C#
+# Scripter - C# Script Interpreter
 
-Полнофункциональный интерпретатор скриптов, написанный на C#, который может конвертировать .sharp файлы в исполняемые скрипты с поддержкой функций, классов и статических классов.
+A full-featured script interpreter written in C# that can convert .sharp files into executable scripts with support for functions, classes, and static classes.
 
-## Возможности
+## Features
 
-- ✅ **Переменные и типы данных**: числа, строки, булевы значения
-- ✅ **Арифметические операции**: +, -, *, /, %
-- ✅ **Логические операции**: &&, ||, !
-- ✅ **Операторы сравнения**: ==, !=, <, >, <=, >=
-- ✅ **Условные операторы**: if/else
-- ✅ **Циклы**: while, for
-- ✅ **Функции**: объявление, вызов, параметры, возврат значений
-- ✅ **Классы**: создание, свойства, методы, экземпляры
-- ✅ **Статические классы**: статические методы и свойства
-- ✅ **Встроенные функции**: print(), input(), length()
-- ✅ **Замыкания**: функции могут возвращать другие функции
-- ✅ **Рекурсия**: поддержка рекурсивных вызовов
-- ✅ **Оптимизации**: readonly struct, ref struct, агрессивная инлайнизация
-- ✅ **Модульность**: интерфейс IScripterConsole для кастомного вывода
-- ✅ **SOLID принципы**: разделение ответственности, инверсия зависимостей
-- ✅ **Clean Architecture**: Core, Infrastructure, Extensions слои
+- ✅ **Variables and Data Types**: numbers, strings, boolean values
+- ✅ **Arithmetic Operations**: +, -, *, /, %
+- ✅ **Logical Operations**: &&, ||, !
+- ✅ **Comparison Operators**: ==, !=, <, >, <=, >=
+- ✅ **Conditional Statements**: if/else
+- ✅ **Loops**: while, for
+- ✅ **Functions**: declaration, call, parameters, return values
+- ✅ **Classes**: creation, properties, methods, instances
+- ✅ **Static Classes**: static methods and properties
+- ✅ **Built-in Functions**: print(), input(), length()
+- ✅ **Closures**: functions can return other functions
+- ✅ **Recursion**: support for recursive calls
+- ✅ **Optimizations**: readonly struct, ref struct, aggressive inlining
+- ✅ **Modularity**: IScripterConsole interface for custom output
+- ✅ **SOLID Principles**: separation of concerns, dependency inversion
+- ✅ **Clean Architecture**: Core, Infrastructure, Extensions layers
 
-## Установка и запуск
+## Installation and Running
 
-1. Убедитесь, что у вас установлен .NET 6.0 или выше
-2. Клонируйте или скачайте проект
-3. Скомпилируйте проект:
+1. Make sure you have .NET 6.0 or higher installed
+2. Clone or download the project
+3. Compile the project:
    ```bash
    dotnet build
    ```
-4. Запустите интерпретатор:
+4. Run the interpreter:
    ```bash
    dotnet run
    ```
 
-### VS Code расширение
-Для удобной работы с файлами `.sharp` установите VS Code расширение:
+### VS Code Extension
+For convenient work with `.sharp` files, install the VS Code extension:
 
-1. **Перейдите в папку** `VsCodeExtension`
-2. **Следуйте инструкциям** в `INSTALL.md`
-3. **Наслаждайтесь** подсветкой синтаксиса и автодополнением!
+1. **Go to the folder** `VsCodeExtension`
+2. **Follow the instructions** in `INSTALL.md`
+3. **Enjoy** syntax highlighting and autocompletion!
 
-## Структура проекта
+## Project Structure
 
 ```
 Scripter/
-├── Scripter/                    # Основной код интерпретатора
-│   ├── Program.cs               # Точка входа
-│   ├── Core/                    # Доменная логика
-│   │   ├── Domain/              # Доменные модели
-│   │   │   ├── Token.cs         # Токены (readonly struct)
-│   │   │   ├── AST.cs           # Абстрактное синтаксическое дерево
-│   │   │   ├── Runtime.cs       # Среда выполнения
-│   │   │   └── Position.cs      # Ref struct для позиции
-│   │   ├── Lexer.cs             # Лексический анализатор
-│   │   ├── Parser.cs            # Синтаксический анализатор
-│   │   ├── Interpreter.cs       # Интерпретатор
-│   │   └── ScriptService.cs     # Сервис выполнения скриптов
-│   ├── Infrastructure/          # Внешние зависимости
-│   │   ├── FileSystem/          # Работа с файловой системой
-│   │   │   ├── IFileService.cs  # Интерфейс файлового сервиса
-│   │   │   └── FileService.cs   # Реализация файлового сервиса
-│   │   └── Console/             # Консольный вывод
-│   │       ├── IScripterConsole.cs  # Интерфейс для вывода
-│   │       └── DefaultConsole.cs    # Стандартная реализация
-│   └── Extensions/              # Расширения
-│       ├── StringHelper.cs      # Оптимизированные методы для строк
-│       └── CollectionExtensions.cs # Расширения для коллекций
-├── tests/                       # Тестовые скрипты (.sharp)
-├── VsCodeExtension/             # VS Code расширение для .sharp
-│   ├── package.json             # Конфигурация расширения
-│   ├── syntaxes/                # Grammar для подсветки синтаксиса
-│   ├── language-configuration/  # Конфигурация языка
-│   ├── snippets/                # Сниппеты для быстрого кода
-│   └── README.md                # Документация расширения
-├── Scripter.csproj              # Файл проекта
-└── README.md                    # Документация
+├── Scripter/                    # Main interpreter code
+│   ├── Program.cs               # Entry point
+│   ├── Core/                    # Domain logic
+│   │   ├── Domain/              # Domain models
+│   │   │   ├── Token.cs         # Tokens (readonly struct)
+│   │   │   ├── AST.cs           # Abstract Syntax Tree
+│   │   │   ├── Runtime.cs       # Runtime environment
+│   │   │   └── Position.cs      # Ref struct for position
+│   │   ├── Lexer.cs             # Lexical analyzer
+│   │   ├── Parser.cs            # Syntax analyzer
+│   │   ├── Interpreter.cs       # Interpreter
+│   │   └── ScriptService.cs     # Script execution service
+│   ├── Infrastructure/          # External dependencies
+│   │   ├── FileSystem/          # File system operations
+│   │   │   ├── IFileService.cs  # File service interface
+│   │   │   └── FileService.cs   # File service implementation
+│   │   └── Console/             # Console output
+│   │       ├── IScripterConsole.cs  # Output interface
+│   │       └── DefaultConsole.cs    # Standard implementation
+│   └── Extensions/              # Extensions
+│       ├── StringHelper.cs      # Optimized string methods
+│       └── CollectionExtensions.cs # Collection extensions
+├── tests/                       # Test scripts (.sharp)
+├── VsCodeExtension/             # VS Code extension for .sharp
+│   ├── package.json             # Extension configuration
+│   ├── syntaxes/                # Grammar for syntax highlighting
+│   ├── language-configuration/  # Language configuration
+│   ├── snippets/                # Code snippets
+│   └── README.md                # Extension documentation
+├── Scripter.csproj              # Project file
+└── README.md                    # Documentation
 ```
 
-## Архитектура
+## Architecture
 
-Проект построен согласно принципам **SOLID** и **Clean Architecture**:
+The project is built according to **SOLID** and **Clean Architecture** principles:
 
-### 🏗️ **Слои архитектуры:**
+### 🏗️ **Architecture Layers:**
 
-1. **Core** - Доменная логика
-   - **Domain** - Доменные модели (Token, AST, Runtime)
-   - **Lexer, Parser, Interpreter** - Основные компоненты интерпретатора
-   - **ScriptService** - Сервис для выполнения скриптов
+1. **Core** - Domain logic
+   - **Domain** - Domain models (Token, AST, Runtime)
+   - **Lexer, Parser, Interpreter** - Main interpreter components
+   - **ScriptService** - Service for script execution
 
-2. **Infrastructure** - Внешние зависимости
-   - **FileSystem** - Работа с файловой системой
+2. **Infrastructure** - External dependencies
+   - **FileSystem** - File system operations
 
-3. **Console** - Консольный вывод
-   - Абстракция для вывода в консоль
+3. **Console** - Console output
+   - Abstraction for console output
 
-4. **Extensions** - Расширения
-   - Вспомогательные методы и оптимизации
+4. **Extensions** - Extensions
+   - Helper methods and optimizations
 
-### 🔧 **SOLID принципы:**
+### 🔧 **SOLID Principles:**
 
-- **S** - Single Responsibility: каждый класс имеет одну ответственность
-- **O** - Open/Closed: открыт для расширения, закрыт для модификации
-- **L** - Liskov Substitution: интерфейсы могут быть заменены реализациями
-- **I** - Interface Segregation: интерфейсы разделены по функциональности
-- **D** - Dependency Inversion: зависимости через интерфейсы
+- **S** - Single Responsibility: each class has one responsibility
+- **O** - Open/Closed: open for extension, closed for modification
+- **L** - Liskov Substitution: interfaces can be replaced with implementations
+- **I** - Interface Segregation: interfaces are separated by functionality
+- **D** - Dependency Inversion: dependencies through interfaces
 
-## Использование
+## Usage
 
-### Интерактивный режим
+### Interactive Mode
 ```bash
 dotnet run
 ```
-Затем введите команды или загрузите файл:
+Then enter commands or load a file:
 ```
 scripter> load example_script
 ```
 
-### Запуск с файлом
+### Run with File
 ```bash
 dotnet run tests/example_script.sharp
 ```
 
-### Доступные тестовые скрипты
+### Available Test Scripts
 
-В папке `tests/` находятся следующие тестовые скрипты:
+In the `tests/` folder, you can find the following test scripts:
 
-- **basic_test.sharp** - Базовые операции (переменные, арифметика, условия)
-- **working_test.sharp** - Рабочий тест с условиями
-- **minimal_test.sharp** - Минимальный тест
-- **debug_test.sharp** - Отладочный тест
-- **simple_test.sharp** - Простой тест с функциями
-- **simple_example.sharp** - Простой пример
-- **simple_function.sharp** - Тест функций
-- **function_test.sharp** - Тест функций
-- **test_function_call.sharp** - Тест вызова функций
-- **example_script.sharp** - Расширенный пример
-- **advanced_example.sharp** - Продвинутый пример
+- **basic_test.sharp** - Basic operations (variables, arithmetic, conditions)
+- **working_test.sharp** - Working test with conditions
+- **minimal_test.sharp** - Minimal test
+- **debug_test.sharp** - Debug test
+- **simple_test.sharp** - Simple test with functions
+- **simple_example.sharp** - Simple example
+- **simple_function.sharp** - Function test
+- **function_test.sharp** - Function test
+- **test_function_call.sharp** - Function call test
+- **example_script.sharp** - Extended example
+- **advanced_example.sharp** - Advanced example
 
-Пример запуска:
+Example run:
 ```bash
 dotnet run tests/basic_test.sharp
 dotnet run tests/working_test.sharp
 ```
 
-## Синтаксис
+## Syntax
 
-### Переменные
+### Variables
 ```javascript
 var x = 10;
-var name = "Привет";
+var name = "Hello";
 var isActive = true;
 ```
 
-### Функции
+### Functions
 ```javascript
 function add(a, b) {
     return a + b;
 }
 
 function greet(name) {
-    return "Привет, " + name;
+    return "Hello, " + name;
 }
 ```
 
-### Классы
+### Classes
 ```javascript
 class Person {
     public name;
     public age;
     
     function greet() {
-        return "Привет, меня зовут " + this.name;
+        return "Hello, my name is " + this.name;
     }
 }
 
 var person = new Person();
-person.name = "Алексей";
+person.name = "Alex";
 print(person.greet());
 ```
 
-### Статические классы
+### Static Classes
 ```javascript
 static class MathUtils {
     static function square(x) {
@@ -199,63 +199,63 @@ static class MathUtils {
 print(MathUtils.square(5));
 ```
 
-### Условия и циклы
+### Conditions and Loops
 ```javascript
 if (x > 0) {
-    print("Положительное число");
+    print("Positive number");
 } else {
-    print("Отрицательное или ноль");
+    print("Negative or zero");
 }
 
 var i = 0;
 while (i < 10) {
-    print("Итерация: " + i);
+    print("Iteration: " + i);
     i = i + 1;
 }
 ```
 
-### Встроенные функции
+### Built-in Functions
 ```javascript
-print("Привет, мир!");
-var input = input("Введите ваше имя: ");
-var len = length("Строка");
+print("Hello, world!");
+var input = input("Enter your name: ");
+var len = length("String");
 ```
 
-## Примеры
+## Examples
 
-В проекте включены два примера:
-- `example_script.txt` - базовые возможности
-- `advanced_example.txt` - продвинутые примеры с классами
+The project includes two examples:
+- `example_script.txt` - basic capabilities
+- `advanced_example.txt` - advanced examples with classes
 
-## Архитектура
+## Architecture
 
-Проект состоит из следующих основных компонентов:
+The project consists of the following main components:
 
-1. **Token.cs** - Определение токенов и типов токенов
-2. **Lexer.cs** - Лексический анализатор (токенизация)
-3. **AST.cs** - Абстрактное синтаксическое дерево
-4. **Parser.cs** - Синтаксический анализатор
-5. **Runtime.cs** - Система времени выполнения
-6. **Interpreter.cs** - Интерпретатор для выполнения скриптов
-7. **Program.cs** - Главный класс программы
+1. **Token.cs** - Token definition and token types
+2. **Lexer.cs** - Lexical analyzer (tokenization)
+3. **AST.cs** - Abstract Syntax Tree
+4. **Parser.cs** - Syntax analyzer
+5. **Runtime.cs** - Runtime system
+6. **Interpreter.cs** - Interpreter for script execution
+7. **Program.cs** - Main program class
 
-## Ограничения
+## Limitations
 
-- Нет поддержки массивов (планируется в будущих версиях)
-- Ограниченная работа со строками
-- Нет поддержки исключений
-- Простая система типов
+- No array support (planned for future versions)
+- Limited string operations
+- No exception support
+- Simple type system
 
-## Разработка
+## Development
 
-Для добавления новых возможностей:
+To add new features:
 
-1. Добавьте новые токены в `Token.cs`
-2. Обновите лексер в `Lexer.cs`
-3. Добавьте новые AST узлы в `AST.cs`
-4. Обновите парсер в `Parser.cs`
-5. Реализуйте выполнение в `Interpreter.cs`
+1. Add new tokens in `Token.cs`
+2. Update the lexer in `Lexer.cs`
+3. Add new AST nodes in `AST.cs`
+4. Update the parser in `Parser.cs`
+5. Implement execution in `Interpreter.cs`
 
-## Лицензия
+## License
 
-Этот проект создан в образовательных целях и может свободно использоваться и модифицироваться.
+This project is created for educational purposes and can be freely used and modified.

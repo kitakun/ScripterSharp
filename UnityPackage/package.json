@@ -1,0 +1,50 @@
+{
+  "name": "com.scripter.unity",
+  "version": "1.0.0",
+  "displayName": "Scripter - Sharp Script Interpreter",
+  "description": "Unity package for executing Sharp scripts with syntax highlighting and custom editor",
+  "unity": "2021.3",
+  "unityRelease": "0f1",
+  "keywords": [
+    "scripting",
+    "interpreter",
+    "sharp",
+    "runtime",
+    "editor"
+  ],
+  "author": {
+    "name": "Scripter Team",
+    "email": "xfikysx@ya.ru",
+    "url": "https://github.com/kitakun/ScripterSharp"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitakun/ScripterSharp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kitakun/ScripterSharp/issues"
+  },
+  "homepage": "https://github.com/kitakun/ScripterSharp#readme",
+  "dependencies": {
+    "com.unity.ugui": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "Basic Examples",
+      "description": "Basic Sharp script examples",
+      "path": "Samples~/BasicExamples"
+    },
+    {
+      "displayName": "Advanced Examples",
+      "description": "Advanced Sharp script examples with classes and functions",
+      "path": "Samples~/AdvancedExamples"
+    },
+    {
+      "displayName": "Unity Examples",
+      "description": "Unity GameObject manipulation examples with static syntax and custom functions",
+      "path": "Samples~/UnityExamples"
+    }
+  ],
+  "type": "library"
+}
