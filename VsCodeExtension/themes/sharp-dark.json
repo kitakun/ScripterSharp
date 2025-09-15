@@ -1,0 +1,132 @@
+{
+  "name": "Sharp Dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1e1e1e",
+    "editor.foreground": "#d4d4d4",
+    "editorLineNumber.foreground": "#858585",
+    "editorLineNumber.activeForeground": "#c6c6c6",
+    "editor.selectionBackground": "#264f78",
+    "editor.inactiveSelectionBackground": "#3a3d41"
+  },
+  "tokenColors": [
+    {
+      "name": "Keywords - Declaration",
+      "scope": [
+        "keyword.control.declaration.sharp"
+      ],
+      "settings": {
+        "foreground": "#569cd6",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Keywords - Modifiers",
+      "scope": [
+        "keyword.control.modifier.sharp"
+      ],
+      "settings": {
+        "foreground": "#d7ba7d",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Keywords - Control Flow",
+      "scope": [
+        "keyword.control.flow.sharp"
+      ],
+      "settings": {
+        "foreground": "#c586c0",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Keywords - Literals",
+      "scope": [
+        "keyword.other.literal.sharp"
+      ],
+      "settings": {
+        "foreground": "#569cd6"
+      }
+    },
+    {
+      "name": "Keywords - Special",
+      "scope": [
+        "keyword.other.special.sharp"
+      ],
+      "settings": {
+        "foreground": "#4ec9b0"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": [
+        "string.quoted.double.sharp",
+        "string.quoted.single.sharp"
+      ],
+      "settings": {
+        "foreground": "#ce9178"
+      }
+    },
+    {
+      "name": "Numbers",
+      "scope": [
+        "constant.numeric.sharp"
+      ],
+      "settings": {
+        "foreground": "#b5cea8"
+      }
+    },
+    {
+      "name": "Functions",
+      "scope": [
+        "entity.name.function.sharp"
+      ],
+      "settings": {
+        "foreground": "#dcdcaa"
+      }
+    },
+    {
+      "name": "Classes",
+      "scope": [
+        "entity.name.type.class.sharp"
+      ],
+      "settings": {
+        "foreground": "#4ec9b0",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Variables",
+      "scope": [
+        "variable.other.sharp"
+      ],
+      "settings": {
+        "foreground": "#9cdcfe"
+      }
+    },
+    {
+      "name": "Comments",
+      "scope": [
+        "comment.line.double-slash.sharp",
+        "comment.block.sharp"
+      ],
+      "settings": {
+        "foreground": "#6a9955",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Operators",
+      "scope": [
+        "keyword.operator.assignment.sharp",
+        "keyword.operator.arithmetic.sharp",
+        "keyword.operator.comparison.sharp",
+        "keyword.operator.logical.sharp"
+      ],
+      "settings": {
+        "foreground": "#d4d4d4"
+      }
+    }
+  ]
+}

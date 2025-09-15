@@ -1,0 +1,111 @@
+{
+  "Function Declaration": {
+    "prefix": "func",
+    "body": [
+      "function ${1:functionName}(${2:parameters}) {",
+      "\t${3:// function body}",
+      "}"
+    ],
+    "description": "Create a function declaration"
+  },
+  "Class Declaration": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName} {",
+      "\t${2:// class body}",
+      "}"
+    ],
+    "description": "Create a class declaration"
+  },
+  "Static Class": {
+    "prefix": "static",
+    "body": [
+      "static class ${1:ClassName} {",
+      "\t${2:// static class body}",
+      "}"
+    ],
+    "description": "Create a static class declaration"
+  },
+  "Variable Declaration": {
+    "prefix": "var",
+    "body": [
+      "var ${1:variableName} = ${2:value};"
+    ],
+    "description": "Create a variable declaration"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2:// if body}",
+      "}"
+    ],
+    "description": "Create an if statement"
+  },
+  "If-Else Statement": {
+    "prefix": "ifelse",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2:// if body}",
+      "} else {",
+      "\t${3:// else body}",
+      "}"
+    ],
+    "description": "Create an if-else statement"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t${2:// loop body}",
+      "}"
+    ],
+    "description": "Create a while loop"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (var ${1:i} = ${2:0}; ${1:i} < ${3:10}; ${1:i} = ${1:i} + 1) {",
+      "\t${4:// loop body}",
+      "}"
+    ],
+    "description": "Create a for loop"
+  },
+  "Print Statement": {
+    "prefix": "print",
+    "body": [
+      "print(${1:value});"
+    ],
+    "description": "Create a print statement"
+  },
+  "Input Statement": {
+    "prefix": "input",
+    "body": [
+      "var ${1:variableName} = input(${2:\"prompt\"});"
+    ],
+    "description": "Create an input statement"
+  },
+  "Return Statement": {
+    "prefix": "return",
+    "body": [
+      "return ${1:value};"
+    ],
+    "description": "Create a return statement"
+  },
+  "Comment": {
+    "prefix": "//",
+    "body": [
+      "// ${1:comment}"
+    ],
+    "description": "Create a line comment"
+  },
+  "Block Comment": {
+    "prefix": "/*",
+    "body": [
+      "/*",
+      " * ${1:comment}",
+      " */"
+    ],
+    "description": "Create a block comment"
+  }
+}

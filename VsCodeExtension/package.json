@@ -1,0 +1,61 @@
+{
+  "name": "sharp-language-support",
+  "displayName": "Sharp Language Support",
+  "description": "Syntax highlighting and language support for .sharp files",
+  "version": "1.0.0",
+  "publisher": "scripter",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "sharp",
+    "scripting",
+    "language",
+    "syntax",
+    "highlighting"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "sharp",
+        "aliases": [
+          "Sharp",
+          "sharp"
+        ],
+        "extensions": [
+          ".sharp"
+        ],
+        "configuration": "./language-configuration/sharp.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sharp",
+        "scopeName": "source.sharp",
+        "path": "./syntaxes/sharp.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sharp",
+        "path": "./snippets/sharp.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Sharp Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/sharp-dark.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/scripter"
+  },
+  "license": "MIT",
+  "icon": "icon.svg"
+}

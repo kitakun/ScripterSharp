@@ -1,0 +1,7 @@
+function test() {
+    print("Hello from function");
+}
+
+print("Before function call");
+test();
+print("After function call");

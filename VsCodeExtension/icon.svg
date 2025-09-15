@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон -->
+  <rect width="128" height="128" rx="16" fill="#007ACC"/>
+  
+  <!-- Символ # -->
+  <g fill="white" stroke="white" stroke-width="2">
+    <!-- Горизонтальные линии -->
+    <line x1="20" y1="45" x2="108" y2="45" stroke-width="8"/>
+    <line x1="20" y1="75" x2="108" y2="75" stroke-width="8"/>
+    
+    <!-- Вертикальные линии -->
+    <line x1="40" y1="25" x2="48" y2="103" stroke-width="8"/>
+    <line x1="70" y1="25" x2="78" y2="103" stroke-width="8"/>
+  </g>
+  
+  <!-- Текст Sharp -->
+  <text x="64" y="115" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Sharp</text>
+</svg>

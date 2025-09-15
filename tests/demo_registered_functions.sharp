@@ -1,0 +1,22 @@
+// Демонстрация работы с функциями, зарегистрированными из C# кода
+// Этот файл показывает, как будут работать функции после их регистрации в C#
+
+print("=== Демонстрация зарегистрированных функций ===");
+
+// Примечание: Эти функции должны быть зарегистрированы в C# коде перед выполнением
+// Пример регистрации в C#:
+// var registry = interpreter.GetFunctionRegistry();
+// registry.RegisterFunction<int>("DoSomething", addTo => new RuntimeValue(addTo + 1));
+// registry.RegisterFunction<string>("Greet", name => new RuntimeValue($"Hello, {name}!"));
+// registry.RegisterFunction<int, int>("Add", (a, b) => new RuntimeValue(a + b));
+
+print("\nЕсли функции зарегистрированы в C# коде, то:");
+print("DoSomething(5) вернет: 6");
+print("Greet(\"World\") вернет: Hello, World!");
+print("Add(3, 4) вернет: 7");
+
+print("\n=== Демонстрация завершена ===");
+print("Для тестирования реальных функций нужно:");
+print("1. Создать C# код с регистрацией функций");
+print("2. Выполнить регистрацию перед запуском скрипта");
+print("3. Затем выполнить этот Sharp скрипт");

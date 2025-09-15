@@ -1,0 +1,98 @@
+// Демонстрация подсветки ключевых слов Sharp
+
+// === КЛЮЧЕВЫЕ СЛОВА ОБЪЯВЛЕНИЯ ===
+var myVariable = "Hello";           // var - объявление переменной
+function myFunction() {             // function - объявление функции
+    return "World";
+}
+class MyClass {                     // class - объявление класса
+    // содержимое класса
+}
+static class MyStaticClass {        // static - статический класс
+    // содержимое статического класса
+}
+
+// === МОДИФИКАТОРЫ ДОСТУПА ===
+public var publicVar = 1;           // public - публичный доступ
+private var privateVar = 2;         // private - приватный доступ
+
+// === КЛЮЧЕВЫЕ СЛОВА УПРАВЛЕНИЯ ПОТОКОМ ===
+if (true) {                         // if - условный оператор
+    print("Condition is true");
+} else {                            // else - альтернативная ветка
+    print("Condition is false");
+}
+
+while (false) {                     // while - цикл while
+    print("This won't execute");
+}
+
+for (var i = 0; i < 5; i = i + 1) { // for - цикл for
+    print("Iteration: " + i);
+}
+
+function testReturn() {             // return - возврат значения
+    return 42;
+}
+
+// === ЛИТЕРАЛЫ ===
+var boolTrue = true;                // true - булев литерал
+var boolFalse = false;              // false - булев литерал
+var nullValue = null;               // null - null литерал
+
+// === СПЕЦИАЛЬНЫЕ КЛЮЧЕВЫЕ СЛОВА ===
+var obj = new MyClass();            // new - создание объекта
+var self = this;                    // this - ссылка на текущий объект
+var parent = base;                  // base - ссылка на базовый класс
+
+// === КОМБИНИРОВАННЫЙ ПРИМЕР ===
+class Person {
+    public var name;
+    private var age;
+    
+    function Person(n, a) {
+        name = n;
+        age = a;
+    }
+    
+    function isAdult() {
+        if (age >= 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    function greet() {
+        var message = "Hello, I'm " + name;
+        print(message);
+        return message;
+    }
+}
+
+static class Utils {
+    public function add(a, b) {
+        return a + b;
+    }
+    
+    private function validate(value) {
+        if (value != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+// === ИСПОЛЬЗОВАНИЕ ===
+var person = new Person("Alice", 25);
+var result = person.isAdult();
+
+if (result == true) {
+    person.greet();
+} else {
+    print("Person is a minor");
+}
+
+var sum = Utils.add(10, 20);
+print("Sum: " + sum);

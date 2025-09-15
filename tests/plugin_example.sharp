@@ -1,0 +1,64 @@
+// Пример использования системы плагинов Scripter
+
+// Загружаем плагин C# синтаксиса
+print("Загрузка плагина C# синтаксиса...");
+var pluginLoaded = loadPlugin("csharp");
+
+if (pluginLoaded) {
+    print("Плагин успешно загружен!");
+    
+    // Список загруженных плагинов
+    listPlugins();
+    
+    // Создаем функцию с C# синтаксисом
+    print("\nСоздание функции с C# синтаксисом...");
+    
+    // Пример 1: Простая функция
+    var result1 = CreateFunction("MyFunction", "Func<int, string, string> (argumentInt: int, argumentString: string) => { return \"ok it works\"; }");
+    
+    if (result1) {
+        print("Функция MyFunction создана успешно!");
+    }
+    
+    // Пример 2: Функция с математическими операциями
+    var result2 = CreateFunction("AddNumbers", "Func<double, double, double> (a: double, b: double) => { return a + b; }");
+    
+    if (result2) {
+        print("Функция AddNumbers создана успешно!");
+    }
+    
+    // Пример 3: Функция для работы со строками
+    var result3 = CreateFunction("GreetUser", "Func<string, string> (name: string) => { return \"Hello, \" + name + \"!\"; }");
+    
+    if (result3) {
+        print("Функция GreetUser создана успешно!");
+    }
+    
+    // Тестируем функции
+    print("\nТестирование созданных функций:");
+    
+    // Вызываем созданные функции (если они были зарегистрированы)
+    print("Тест завершен!");
+    
+} else {
+    print("Ошибка загрузки плагина!");
+}
+
+// Демонстрация работы с типами
+print("\nДемонстрация работы с типами:");
+var number = 42;
+var text = "Hello World";
+var flag = true;
+
+print("Тип числа: " + TypeOf(number));
+print("Тип строки: " + TypeOf(text));
+print("Тип булева значения: " + TypeOf(flag));
+
+// Приведение типов
+print("\nДемонстрация приведения типов:");
+var stringNumber = "123";
+var convertedNumber = Cast(stringNumber, "int");
+print("Исходное значение: " + stringNumber + " (тип: " + TypeOf(stringNumber) + ")");
+print("После приведения к int: " + convertedNumber + " (тип: " + TypeOf(convertedNumber) + ")");
+
+print("\nПример завершен!");

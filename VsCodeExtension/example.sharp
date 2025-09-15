@@ -1,0 +1,95 @@
+// Пример файла Sharp для демонстрации подсветки синтаксиса
+
+// Объявление переменных
+var name = "Alice";
+var age = 25;
+var isStudent = true;
+
+// Функция для приветствия
+function greet(personName) {
+    print("Hello, " + personName + "!");
+    return "Greeting sent";
+}
+
+// Класс Person
+class Person {
+    var name;
+    var age;
+    
+    function Person(n, a) {
+        name = n;
+        age = a;
+    }
+    
+    function sayHello() {
+        print("Hi, I'm " + name + " and I'm " + age + " years old");
+    }
+    
+    function isAdult() {
+        if (age >= 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+// Статический класс для утилит
+static class Utils {
+    function add(a, b) {
+        return a + b;
+    }
+    
+    function multiply(x, y) {
+        return x * y;
+    }
+}
+
+// Основная логика
+var person = new Person("Bob", 30);
+person.sayHello();
+
+if (person.isAdult()) {
+    print("Person is an adult");
+} else {
+    print("Person is a minor");
+}
+
+// Циклы
+var numbers = [1, 2, 3, 4, 5];
+var sum = 0;
+
+for (var i = 0; i < 5; i = i + 1) {
+    sum = sum + numbers[i];
+}
+
+print("Sum: " + sum);
+
+// While цикл
+var counter = 0;
+while (counter < 3) {
+    print("Counter: " + counter);
+    counter = counter + 1;
+}
+
+// Вызов функций
+var result = Utils.add(10, 20);
+print("Result: " + result);
+
+// Операторы
+var a = 10;
+var b = 5;
+var c = a + b * 2;
+var d = (a > b) && (b < 10);
+
+print("c = " + c);
+print("d = " + d);
+
+// Строки и числа
+var message = "The answer is: " + 42;
+var pi = 3.14159;
+var negative = -100;
+
+print(message);
+print("Pi: " + pi);
+print("Negative: " + negative);

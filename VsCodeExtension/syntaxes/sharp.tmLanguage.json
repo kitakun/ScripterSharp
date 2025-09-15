@@ -1,0 +1,257 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Sharp",
+  "scopeName": "source.sharp",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#identifiers"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#classes"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#control-flow"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.sharp",
+          "begin": "//",
+          "end": "$"
+        },
+        {
+          "name": "comment.block.sharp",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.declaration.sharp",
+          "match": "\\b(var|function|class|static)\\b"
+        },
+        {
+          "name": "keyword.control.modifier.sharp",
+          "match": "\\b(public|private)\\b"
+        },
+        {
+          "name": "keyword.control.flow.sharp",
+          "match": "\\b(if|else|while|for|return)\\b"
+        },
+        {
+          "name": "keyword.other.literal.sharp",
+          "match": "\\b(true|false|null)\\b"
+        },
+        {
+          "name": "keyword.other.special.sharp",
+          "match": "\\b(new|this|base)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.sharp",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.sharp",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.sharp",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.sharp",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.sharp",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.sharp",
+          "match": "(=|\\+=|-=)"
+        },
+        {
+          "name": "keyword.operator.arithmetic.sharp",
+          "match": "(\\+|\\-|\\*|/|%)"
+        },
+        {
+          "name": "keyword.operator.comparison.sharp",
+          "match": "(==|!=|<=|>=|<|>)"
+        },
+        {
+          "name": "keyword.operator.logical.sharp",
+          "match": "(&&|\\|\\||!)"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "name": "variable.other.sharp",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "meta.function.sharp",
+          "begin": "\\b(function)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.declaration.sharp"
+            },
+            "2": {
+              "name": "entity.name.function.sharp"
+            }
+          },
+          "end": "\\}",
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        },
+        {
+          "name": "meta.function-call.sharp",
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9]*)\\s*\\(",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.sharp"
+            }
+          }
+        }
+      ]
+    },
+    "classes": {
+      "patterns": [
+        {
+          "name": "meta.class.sharp",
+          "begin": "\\b(class|static)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.declaration.sharp"
+            },
+            "2": {
+              "name": "entity.name.type.class.sharp"
+            }
+          },
+          "end": "\\}",
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "meta.variable.declaration.sharp",
+          "match": "\\b(var)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+          "captures": {
+            "1": {
+              "name": "keyword.control.declaration.sharp"
+            },
+            "2": {
+              "name": "variable.other.sharp"
+            }
+          }
+        }
+      ]
+    },
+    "control-flow": {
+      "patterns": [
+        {
+          "name": "meta.control.if.sharp",
+          "begin": "\\b(if)\\s*\\(",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.sharp"
+            }
+          },
+          "end": "\\}",
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        },
+        {
+          "name": "meta.control.while.sharp",
+          "begin": "\\b(while)\\s*\\(",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.sharp"
+            }
+          },
+          "end": "\\}",
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        },
+        {
+          "name": "meta.control.for.sharp",
+          "begin": "\\b(for)\\s*\\(",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.flow.sharp"
+            }
+          },
+          "end": "\\}",
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
